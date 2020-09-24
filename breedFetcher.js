@@ -27,7 +27,7 @@ const fetchBreedDescription = function(breedName, callback) {
       request(urlSearchBreed, (error, response, body) => {
         if (error) callback(error, null);
         else {
-          callback(null, JSON.parse(body)[0].breeds[0].description);
+          callback(null, JSON.parse(body)[0].breeds[0].description.trim());
         }
       });
     }
